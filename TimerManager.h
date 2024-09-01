@@ -13,10 +13,10 @@
 // Structure to represent a timer event
 struct TimerEvent {
     unsigned long period;     // Interval between events in milliseconds
-    unsigned long next;       // Timestamp when the event should next trigger
+    unsigned long next;       // Timestamp when the event should trigger next
     void (*callback)();       // Pointer to the callback function for the timer event
     bool active;              // Flag to indicate if the timer is active
-    char name[MAX_LEN_TIMER_NAME];
+    char name[MAX_LEN_TIMER_NAME]; // Timer name
 };
 
 // Class to manage multiple timer events using a single hardware timer
